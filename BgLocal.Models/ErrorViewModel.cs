@@ -1,4 +1,4 @@
-namespace BGLocalWeb.Models {
+namespace BgLocal.Models {
     public class ErrorViewModel {
         public string? RequestId { get; set; }
 

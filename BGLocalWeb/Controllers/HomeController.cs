@@ -1,4 +1,4 @@
-﻿using BGLocalWeb.Models;
+﻿using BgLocal.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
