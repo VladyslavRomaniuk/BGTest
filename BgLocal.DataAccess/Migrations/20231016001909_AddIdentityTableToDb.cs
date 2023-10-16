@@ -31,7 +31,6 @@ namespace BgLocal.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    Discriminator = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     Surname = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     BirthDate = table.Column<DateOnly>(type: "date", nullable: true),
