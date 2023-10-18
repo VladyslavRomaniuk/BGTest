@@ -3,6 +3,7 @@ using System;
 using BgLocal.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BgLocal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231017213102_AddAuthorsToDb")]
+    partial class AddAuthorsToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,106 +130,6 @@ namespace BgLocal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BirthDate = new DateOnly(1799, 6, 6),
-                            Name = "Alexander",
-                            Surname = "Pushkin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BirthDate = new DateOnly(1828, 9, 9),
-                            Name = "Lev",
-                            Surname = "Tolstoy"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BirthDate = new DateOnly(1818, 11, 9),
-                            Name = "Ivan",
-                            Surname = "Turgenev"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BirthDate = new DateOnly(1809, 4, 1),
-                            Name = "Nikolay",
-                            Surname = "Gogol"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            BirthDate = new DateOnly(1814, 10, 15),
-                            Name = "Mikhail",
-                            Surname = "Lermontov"
-                        });
-                });
-
-            modelBuilder.Entity("BgLocal.Models.Book", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<int>("YearOfPublication")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Genre = "Historical novel",
-                            Title = "The Captain's Daughter",
-                            YearOfPublication = 1836
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Genre = "Historical novel",
-                            Title = "War and Peace",
-                            YearOfPublication = 1867
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Genre = "Fiction ",
-                            Title = "Mumu",
-                            YearOfPublication = 1854
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Genre = "Picaresque",
-                            Title = "Dead Souls",
-                            YearOfPublication = 1842
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Genre = "Romance novel",
-                            Title = "A Hero of Our Time",
-                            YearOfPublication = 1840
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BgLocal.DataAccess", "BgLoc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BgLocal.Models", "BgLocal.Models\BgLocal.Models.csproj", "{0723DCAE-23CD-4CCB-97A3-A5BF2012DE92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiBgLocal", "ApiBgLocal\ApiBgLocal.csproj", "{6A4BCC35-C68B-4F88-B20A-9523A0F25F97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0723DCAE-23CD-4CCB-97A3-A5BF2012DE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0723DCAE-23CD-4CCB-97A3-A5BF2012DE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0723DCAE-23CD-4CCB-97A3-A5BF2012DE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4BCC35-C68B-4F88-B20A-9523A0F25F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4BCC35-C68B-4F88-B20A-9523A0F25F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4BCC35-C68B-4F88-B20A-9523A0F25F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4BCC35-C68B-4F88-B20A-9523A0F25F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
